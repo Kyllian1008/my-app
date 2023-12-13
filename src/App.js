@@ -1,5 +1,8 @@
+// Import necessary dependencies
+import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import ChainInfo from './ChainInfo'; // Import your ChainInfo component
 
 function App() {
   return (
@@ -11,15 +14,17 @@ function App() {
         </p>
         <a
           className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="/ChainInfo"
         >
-          Learn React
+          ChainInfo 
         </a>
       </header>
+
+      {/* Use the ChainInfo component */}
+      <ChainInfo />
     </div>
   );
 }
 
 export default App;
+
