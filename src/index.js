@@ -1,26 +1,38 @@
 // index.js
 import React from 'react';
 import ReactDOM from 'react-dom';
-//import Routes from './Routes';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import ChainInfo from './ChainInfo';
-
+import App from './App';
+import ErrorPage from './ErrorPage';
+import FakeBayc from './FakeBayc';
+import TokenPage from './TokenPage';
 import {
   createBrowserRouter,
   RouterProvider,
-} from "react-router-dom";
-import App from './App';
-
+} from 'react-router-dom';
 
 const router = createBrowserRouter([
   {
-    path: "/ChainInfo",
-    element: <ChainInfo/>,
+    path: '/ChainInfo',
+    element: <ChainInfo />,
   },
   {
-    path: "/",
-    element: <App/>,
+    path: '/',
+    element: <App />,
+  },
+  {
+    path: '/ErrorPage',
+    element: <ErrorPage />,
+  },
+  {
+    path: '/FakeBayc',
+    element: <FakeBayc />,
+  },
+  {
+    path: '/FakeBayc/:tokenId',
+    element: <TokenPage />,
   },
 ]);
 
@@ -32,5 +44,3 @@ ReactDOM.render(
 );
 
 reportWebVitals();
-
-
